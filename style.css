@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    ---background: rgb(10, 25, 47);
+    ---text: rgb(0, 230, 255);
+    ---table: rgb(58, 71, 88);
+    ---pink: rgb(255, 0, 127);
+
+
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+body {
+    background-color: rgb(10, 25, 47);
+    width:100vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-container {
+    color: var(---text);
+    position: relative;
+    width: 180px;
+    height: 90px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.choice-container h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.choice-container .choice-box {
+    border: 3px solid var(---table);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.choice-container .choice-box:nth-child(even) {
+    border-right: none;
+}
+
+.background {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 90px;
+    height: 42px;
+    background-color: var(---pink);
+    z-index: -1;
+}
+
+.main-box {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    grid-template-rows: repeat(3,1fr);
+    margin: 30px auto;
+    border: 2px solid var(---table);
+
+}
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 550;
+    color: var(---text);
+    border: 2px solid var(---table);
+}
+.box:hover{
+    background-color: var(---pink);
+}
+#results{
+    color: var(---text);
+    font-size: 2rem;
+    font-weight: 400;
+}
+#play-again{
+    background-color: var(---pink);
+    color: var(---text);
+    font-weight: 500;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+#play-again:hover{
+    transform: scale(1.1);
+    color: var(---pink);
+    background-color: var(---text);
+}
+
